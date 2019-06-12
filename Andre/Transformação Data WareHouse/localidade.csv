@@ -1,0 +1,30 @@
+id;cidade;estado;regiao
+10;Goiania;Goias;Centro-Oeste
+11;Brasila;Distrito Federal;Centro-Oeste
+12;Sao Paulo;Sao Paulo;Sudeste
+13;Cuiaba;Mato Grosso;Centro-Oeste
+14;Paranavai;Parana;Sul
+15;Rio de Janeiro;Rio de Janeiro;Sudeste
+16;Campo Grande;Mato Gosso do Sul;Centro-Oeste
+17;Paraiso Tocatins;Tocatins;Norte
+18;Porto velho;Rondonia;Norte
+19;Juiz de Fora;Minas Gerais;Sudeste
+20;Boca do Acre;Amazonas;Norte
+21;Salvador;Bahia;Nordeste
+22;Belem;Para;Norte
+23;Rio Branco;Acre;Norte
+24;Macapa ;Amapa;Norte
+25;Boa Vista;Roraima;Norte
+26;Sao Luiz;Maranhao;Nordeste
+27;Manaus;Amazonas;Norte
+28;Teresina;Piaui;Nordeste
+29;Fortaleza;Ceara;Nordeste
+30;Maceio;Alagoas;Nordeste
+31;Joao Pessoa;Paraiba;Nordeste
+32;Recife;Pernabumco;Nordeste
+33;Aracaju;Sergipe;Nordeste
+34;Natal;Rio Grande do Norte;Nordeste
+35;Vitoria;Espirito Santo;Sudeste
+36;Curitiba;Parana;Sul
+37;Porto Alegre;Rio grande do Sul;Sul
+38;Florianopolis;Santa Catarina;Sul

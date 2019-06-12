@@ -1,0 +1,16 @@
+id_cliente;Codigo_cliente;Nome_cliente;telefone_cliente;celular_cliente;id_tipo_log_cliente;logradouro_cliente;num_cliente;complemento_cliente;bairro_cliente;cidade_cliente;estado_cliente;CEP_cliente;CPF
+1;1;Maria Joana;(62) 3566-7750;(62) 9997-8888;1;T-53;120;Sem;Setor Bueno;Goiania;GO;74001-155;700.784.180-07
+2;2;Joao Silva Azevedo;(62) 3444-4555;(62) 8600-0000;2;Av. volta Redonda Qd, 243 Lt 9;0;Sem;Jardim novo Mundo;Goiania;GO;74000-000;478.159.147-58
+3;3;Aline Garcia Santos;(61) 4500-0000;(61) 9577-7777;1;Quadra CLN 102 Bloco B;156;Sem;Asa Norte;Brasilia;DF;70722-520;897.487.247-05
+4;4;Lucas Moreira Rocha;(11) 4444-4445;(11) 9955-5555;1;Abelardo Pinto;15;Sem;Centro;Sao Paulo;SP;01034-030;142.784.658-02
+5;5;Joyce Santos;(65) 6988-8777;(65) 8888-8888;3;Praca Alencastro;192;Sem;Centro-Norte;Cuiab ;MT;78005-360;412.365.789-17
+6;6;Matheus Fereirra Gonzaga;(44) 4566-6666;(45) 7889-6666;2;Avenida A;704;Sem;Jardim Morada do Sol;Paranavai;PR;87703-672;354.784.960-71
+7;7;Lucia Magalhaes;(71) 7888-8888;(71) 2566-9988;1;Rua 10 de Janeiro;1145;Sem;Pernambus;Salvador;BA;41120-680;789.123.781-08
+8;8;Marcio Fonseca Gois;(84) 6554-2111;(84) 2666-9999;1;Rua 2;117;Sem;Cj Joao Barros;Ceara-mirim;RN;59570-000;782.784.123-78
+9;9;Lucas Ferreira Lima;(91) 4111-1511;(86) 9771-1777;4;Viela A3;45;Sem;Centro;Sao Luiz do Tapajos;PA;68190-000;247.781.893-03
+10;10;Renata  Lima;(97) 1477-7777;(97) 6364-4444;2;Avenida 11;58;Sem;Plato Piqui ;Boca Do Acre;AM;69850-000;555.478.123-71
+11;11;Rita Pereira;(32) 2444-8777;(32) 8698-7777;1;Rua A;78;Sem;Teixeiras;Juiz de Fora;MG;36033-092;003.147.897-00
+12;12;Alberto Moreira;(69) 4777-7777;(69) 3333-3333;1;Rua Abacateiro;5342;Sem;Cohab;Porto Velho;RO;76808-002;047.578.698-70
+13;13;Gabriela Silva;(63) 4556-6999;(63) 8411-1111;1;Rua 01 Q10 Lt 12;529;Sem;Aeroporto;Paraiso Do Tocantins;TO;77600-000;050.357.741-89
+14;14;Ana Maria Alves;(67) 4444-4444;(67) 8999-9999;2;Avenida 10;110;Sem;Vila Nova Campo Grande;Campo Grande;MS;79104-120;698.745.965-05
+15;15;Eloana Andrade Silva;(21) 3444-4444;(21) 5555-5555;1;Rua M rio de Abreu;789;Sem;Vila Nova De Campos;Rio De Janeiro;RJ;28165-000;356.968.345-03

@@ -1,0 +1,13 @@
+id_loja;Codigo_loja;Nome_loja;telefone_loja;id_tipo_logr;logradouro_loja;numero_loja;complemento_loja;bairro_loja;cidade_loja;estado_loja;CEP_loja;cnpj
+1;2;Carrefur;(62) 3333-3333;2;Av. Deputado Jamel Cecilio;40;Sem;Jardim Goias;Goiania;GO;74001-155;12.345.678/0899-42
+2;3;Carrefur;(61) 3333-3333;1;Qd 111 Bloco D;1389;Sem;Asa Norte;Brasila;DF;70722-520;02.315.678/0009-72
+3;4;Carrefour;(11) 4444-4444;2;Avenida Jacu pesego;100;Sem;Itaquera;Sao Paulo;SP;08260-005;13.375.614/5009-71
+4;5;Carrefur;(65) 3222-4444;2;Av. Carlos Ador de Souza;1;Sem;Coxipo da Ponte;Cuiaba;MT;78093-680;15.784.971/0011-47
+5;6;Carrefur;(44) 3357-7777;1;Rua 12;145;Sem;Centro;Paranavai;PR;87703-672;17.785.144/1177-00
+6;7;Carrefur;(21) 3544-4445;1;Rua Maria Joana;5000;Sem;Vila Nova De Campos;Rio De Janeiro;RJ;28165-000;19.777.444/7778-50
+7;8;Carrefur;(67) 1454-6588;1;Rua 14 de maio;114;Sem;Centro;Campo Grande;MS;79000-000;01.111.478/9874-23
+8;9;Carrefur;(63) 4778-7877;1;Rua 15;405;Sem;Centro;Paraiso Tocatins;TO;77600-000;09.658.784/0012-32
+9;10;Carrefur;(69) 7888-8888;1;Rua22;208;Sem;Cohab;Porto Velho;RO;76000-000;74.444.178/6987-78
+10;11;Carrefur;(32) 7899-9999;1;Rua E;780;Sem;Teixeiras;Juiz de Fora;MG;36000-000;78.147.577/6978-14
+11;12;Carrefur;(97) 8888-8888;2;Avenica C;124;Sem;Plato Piquiÿ;Boca do Acre;AM;69000-000;78.748.142/6974-12
+12;13;Carrefur;(71) 4444-4444;2;Avenida Joao Batista;784;Sem;Centro Velho;Salvador;BA;40000-00;36.557.789/4578-96

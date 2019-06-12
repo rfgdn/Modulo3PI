@@ -1,0 +1,15 @@
+id_produto;cod_produto;descricao;qtd_estoque;preco;id_unid_medida;id_categoria
+1;111;Refrigerante Coca Cola;80;5.99;1;3
+2;102;Frango Friato;400;4.24;3;3
+3;33;Leite Italac;600;2.89;1;1
+4;174;Sabao Omo;600;7.99;3;7
+5;246;Cebola;200;4.5;3;8
+6;877;Estrato tomate Elefante;210;4.79;2;4
+7;448;Cafe Torado Extra Forte;150;8.9;2;5
+8;879;Desodorante Rexona;90;8.98;2;10
+9;810;Amaciante Conforte;112;7.35;1;7
+10;411;Arroz Cristal;350;12.9;3;11
+11;712;Feijao Doca Cota;430;7.9;3;11
+12;773;Acucar;380;9.15;3;11
+13;413;Melancia;100;3.99;3;11
+14;513;Agua Mineral 1 Lt;115;2.9;1;3

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <f:view contentType="text/html" locale="pt" />
+    <head>
+        <title>Relatorio de Produtos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+               <form action="/index.xhtml">
+    <input type="submit" value="Home" />
+</form>
+        <br/>
+        <div>Quantidade total de cada um dos produtos vendidos por tempo</div>
+        <br/>
+        <form jsfc="h:form">
+
+            <label>Data Inicial: </label>
+            <input value="#{relatorioControle.dataInicial}" type="text" name="Data Inicial:"  jsfc="h:inputText"></input>
+            <label>Data Final: </label>
+            
+            <input value="#{relatorioControle.dataFinal}" type="text" name="Data Final:"  jsfc="h:inputText"></input>
+          
+<br/>
+            <input action="#{relatorioControle.Resultado1()}" type ="submit" value="Consultar" jsfc="h:commandButton">
+            </input>
+        </form>
+        
+        <br/>
+        <table align='center﻿'>
+        <table border="1px" cellpadding="5px" cellspacing="0" >
+            <tr>
+                <th>Id </th>
+                <th>Descrição</th>
+                <th>Quatidades Vendidas</th>
+            </tr>
+            
+            <ui:repeat value="#{relatorioControle.resultado1}" var="linha">
+                <tr class="odd">
+                    <td>#{linha[0]}</td>
+                    <td>#{linha[1]}</td>
+                    <td>#{linha[2]}</td>
+                </tr>
+            </ui:repeat> 
+           
+        </table>
+            </table>
+        
+    </body>
+</html>

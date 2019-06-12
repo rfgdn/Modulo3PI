@@ -1,0 +1,47 @@
+select data_venda,
+    EXTRACT(day from data_venda) as dia , 
+	EXTRACT(Month from data_venda) as mes , 
+	EXTRACT(year from data_venda) as ano ,
+	case when EXTRACT(Month from data_venda)=1 then 1
+		when EXTRACT(Month from data_venda)=2 then 1
+		when EXTRACT(Month from data_venda)=3 then 2
+		when EXTRACT(Month from data_venda)=4 then 2
+		when EXTRACT(Month from data_venda)=5 then 3
+		when EXTRACT(Month from data_venda)=6 then 3
+		when EXTRACT(Month from data_venda)=7 then 4
+		when EXTRACT(Month from data_venda)=8 then 4
+		when EXTRACT(Month from data_venda)=9 then 5
+		when EXTRACT(Month from data_venda)=10 then 5
+		when EXTRACT(Month from data_venda)=11 then 6
+		when EXTRACT(Month from data_venda)=12 then 6
+	end as bimestre,
+	
+	case when EXTRACT(Month from data_venda)=1 then 1
+		when EXTRACT(Month from data_venda)=2 then 1
+		when EXTRACT(Month from data_venda)=3 then 1
+		when EXTRACT(Month from data_venda)=4 then 2
+		when EXTRACT(Month from data_venda)=5 then 2
+		when EXTRACT(Month from data_venda)=6 then 2
+		when EXTRACT(Month from data_venda)=7 then 3
+		when EXTRACT(Month from data_venda)=8 then 3
+		when EXTRACT(Month from data_venda)=9 then 3
+		when EXTRACT(Month from data_venda)=10 then 4
+		when EXTRACT(Month from data_venda)=11 then 4
+		when EXTRACT(Month from data_venda)=12 then 4
+	end as trimestre,
+	
+	case when EXTRACT(Month from data_venda)=1 then 1
+		when EXTRACT(Month from data_venda)=2 then 1
+		when EXTRACT(Month from data_venda)=3 then 1
+		when EXTRACT(Month from data_venda)=4 then 1
+		when EXTRACT(Month from data_venda)=5 then 1
+		when EXTRACT(Month from data_venda)=6 then 1
+		when EXTRACT(Month from data_venda)=7 then 2
+		when EXTRACT(Month from data_venda)=8 then 2
+		when EXTRACT(Month from data_venda)=9 then 2
+		when EXTRACT(Month from data_venda)=10 then 2
+		when EXTRACT(Month from data_venda)=11 then 2
+		when EXTRACT(Month from data_venda)=12 then 2
+	end as semestre
+	
+from nota_fiscal

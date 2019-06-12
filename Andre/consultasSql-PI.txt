@@ -1,0 +1,63 @@
+Desenvolver as seguintes consultas:
+
+? Quantidade total de cada um dos produtos vendidos por tempo (opções da
+tabela tempo);
+
+SELECT id_produto, produto.codigo, descricao, SUM(qtde_produto) AS Total_Vendido 
+FROM vendas inner join produto on vendas.id_produto = produto.id 
+inner join tempo on vendas.id_tempo = tempo.id where data_venda BETWEEN'15/03/2019' AND '20/05/2019'
+GROUP BY id_produto, descricao,codigo
+ORDER BY codigo;
+
+? Total valor vendas por loja por semestre;
+
+SELECT id_loja, loja.Cnpj,loja.nome, SUM(valor_vendas) AS Total_vendido  
+FROM vendas inner join loja on vendas.id_loja = loja.id 
+inner join tempo on vendas.id_tempo = tempo.id where semestre = 1
+GROUP BY id_loja, cnpj, nome
+ORDER BY id_loja; 
+
+? Total valor por clientes/ano;
+
+SELECT id_cliente, nome, cliente.cod, cliente.cpf, SUM(valor_vendas) AS Total_comprado
+FROM vendas inner join cliente on vendas.id_cliente = cliente.id 
+inner join tempo on vendas.id_tempo = tempo.id where ano='2019' AND semestre='1'
+GROUP BY id_cliente,cod, cpf , nome 
+ORDER BY id_cliente;
+
+
+? Quantidade total de vendas por produto e por lojas;
+
+SELECT id_loja, id_produto, loja.cnpj, produto.codigo as codigo_produto, produto.descricao, SUM(qtde_produto) AS qtde_vendido  
+FROM vendas inner join loja on vendas.id_loja = loja.id 
+inner join produto on vendas.id_produto = produto.id 
+GROUP BY id_loja, id_produto, cnpj, codigo, descricao 
+ORDER BY codigo;  
+ 
+
+
+? Gráficos de vendas (valor) por região.
+
+SELECT regiao, SUM(valor_vendas) AS Total_vendido
+FROM vendas inner join localidade on vendas.id_localidade = localidade.id 
+GROUP BY  regiao  
+ORDER BY regiao ;
+
+
+
+
+escript para exporta tabela Produto.csv
+
+ 	copy (SELECT id_loja, id_produto, SUM(qtde_produto) AS qtde_vendido  
+                    FROM vendas inner join loja on vendas.id_loja = loja.id 
+                    inner join produto on vendas.id_produto = produto.id 
+                    GROUP BY id_loja, id_produto 
+                    ORDER BY id_loja) to 'C:/temp/loja_sc.csv' with csv header;
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <f:view contentType="text/html" locale="pt" />
+    <head>
+        <title>Relatorio de vendas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+   
+        <form action="/index.xhtml">
+    <input type="submit" value="Home" />
+</form>
+        <br/>
+        <div>Total valor por clientes/ano</div>
+        <br/>
+        <form jsfc="h:form">
+
+            <label>Ano: </label>
+            <input value="#{relatorioControle.ano}" type="text" name="Ano" jsfc="h:inputText"></input>
+            <label>Semestre: </label>
+            
+            <select value="#{relatorioControle.semestre}" jsfc="h:selectOneMenu">
+                <f:selectItem  itemLabel="1°" itemValue="1"/>
+                <f:selectItem  itemLabel="2°" itemValue="2"/>
+            </select>
+
+            <input action="#{relatorioControle.Resultado()}" type ="submit" value="Consultar" jsfc="h:commandButton">
+            </input>
+            
+        </form>
+        
+        <br/>
+        <table align='center﻿'>
+        <table border="1px" cellpadding="5px" cellspacing="0" >
+            <tr>
+                <th>Codigo</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Valor Comprado</th>
+            </tr>
+            
+            <ui:repeat value="#{relatorioControle.resultado}" var="linha">
+                <tr class="odd">
+                    <td>#{linha[0]}</td>
+                    <td>#{linha[1]}</td>
+                    <td>#{linha[2]}</td>
+                    <td>#{linha[3]}</td>
+                </tr>
+            </ui:repeat> 
+           
+          
+        </table>
+            </table>
+        
+        
+        
+    </body>
+</html>

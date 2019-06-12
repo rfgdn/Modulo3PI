@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <f:view contentType="text/html" locale="pt" />
+
+    <head>
+        <title>Dashboard Sistema Vendas</title>
+        
+        
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+        <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
+    </head>
+
+    <body id="page-top">
+     
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark bg-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/relatorio-vendas.xhtml" target="_blank">
+     
+        <div class="sidebar-brand-text mx-3">Admin</div>
+      </a>
+
+     <!-- Divider -->
+      <hr class="sidebar-divider my-0"></hr>
+      
+      
+        <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="total-produto-vendido.xhtml" target="_blank">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Relatorio Produtos</span></a>
+      </li>
+        
+         <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="valor-vendas-loja.xhtml" target="_blank">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Total Vendido por loja</span></a>
+      </li>
+       
+            <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="Qtd-vendas-prod-loja.xhtml " target="_blank">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Quantidade de vendas por produto/lojas</span></a>
+      </li>
+       
+                  <!-- Nav Item - Tables -->
+      <li class="nav-item">
+        <a class="nav-link" href="valor-regiao.xhtml" target="_blank">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Valor vendido por Região</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block" ></hr>
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+       
+
+          <!-- Topbar Search -->
+          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+            <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Pesquisar..." aria-label="Pesquisar" aria-describedby="basic-addon2"></input>
+              <div class="input-group-append">
+                <button class="btn btn-success" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+
+          </ul>
+
+        </nav>
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            
+                         <input action="#{relatorioControle.arquivoJson}" type ="submit" value="Gerar Tabela Produtos">
+                             
+            </input>
+            
+                  <form jsfc="h:form">
+             <input action="#{relatorioControle.Execute()}" type ="submit" value="Ordenar tabela Produto" jsfc="h:commandButton">
+                 <br></br>
+            </input>
+            
+        </form>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+        <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-primary shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Quantidade de vendas no semestre atual
+                                    </div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="/relatorio-vendas.xhtml">#{relatorioControle.quantidadeVendas}</a></div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Valor total de vendas no semestre atual</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalVendas}</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+             <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total de clientes da empresa</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalClientes}</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             
+             
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Quantidade de lojas da empresa</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalLojas}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                  
+                    <head>
+                              <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Data', 'Nordeste', 'Norte', 'Sudeste', 'Sul', 'Centro-Oeste'],
+          ['2004/05',  165,      938,         522,             998,           500],
+          ['2005/06',  135,      1120,        599,             1268,          668],
+          ['2006/07',  157,      1167,        587,             807,          1002],
+          ['2007/08',  139,      1110,        615,             968,           805],
+          ['2008/09',  136,      691,         629,             1026,          1456]
+        ]);
+
+        var options = {
+          title : 'Valor vendido por Região',
+          vAxis: {title: 'Valor'},
+          hAxis: {title: ''},
+          seriesType: 'bars',
+          series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+                    </head>
+               
+              </div>
+            </div>
+        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5"></div>
+              <div class="card shadow mb-4"></div>
+      
+                
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Content Column -->
+            <div class="col-lg-6 mb-4">
+
+            </div>
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Projeto Integrador 2019</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-area-demo.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+       </div>  
+    </body>
+</html>

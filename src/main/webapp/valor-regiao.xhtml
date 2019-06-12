@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <f:view contentType="text/html" locale="pt" />
+    <head>
+        <title>Relatorio de Lojas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        
+             <form action="/index.xhtml">
+    <input type="submit" value="Home" />
+</form>
+          <br/>
+
+        
+        <div>Valor vendido por Região</div>
+   
+        <br/>
+        
+        <table align='center﻿'>
+        <table border="1px" cellpadding="5px" cellspacing="0" >
+            <tr>
+                <th>Região</th>
+                <th>Total vendido</th>
+                
+            </tr>
+            
+            <ui:repeat value="#{relatorioControle.resultado4}" var="linha">
+                <tr class="odd">
+                    <td>#{linha[0]}</td>
+                    <td>#{linha[1]}</td>
+              
+                </tr>
+            </ui:repeat> 
+           
+        </table>
+            </table>
+        
+    </body>
+</html>

@@ -1,0 +1,83 @@
+CREATE TABLE cliente (
+id_cliente serial primary key not null,
+cod_cliente numeric unique not null,
+nome_cliente varchar (50) not null,
+telefone_cliente varchar (14) not null,
+celular_cliente varchar (14) not null,
+id_tipo_logrador_cliente serial not null,
+logradouro_cliente varchar (50) not null,
+numero_cliente numeric not null,
+complemento_cliente varchar(50) not null,
+bairro_cliente varchar(30) not null,
+cidade_cliente varchar(50) not null,
+estado_cliente varchar(2) not null,
+CEP_cliente varchar(9) not null
+);
+
+CREATE TABLE loja (
+id_loja serial primary key not null,
+nome_loja varchar (50) not null,
+telefone_loja varchar (14) not null,
+id_tipo_logrador_loja serial not null,
+logradouro_loja varchar (50) not null,
+numero_loja numeric not null,
+complemento_loja varchar(50) not null,
+bairro_loja varchar(30) not null,
+cidade_loja varchar(50) not null,
+estado_loja varchar(2) not null,
+CEP_loja varchar(9) not null
+);
+
+CREATE TABLE nota_fiscal (
+id_nota serial primary key not null,
+numero_nota numeric unique not null,
+data_venda_nota timestamp not null,
+valor_parcial_nota double precision not null,
+valor_desconto_nota double precision not null,
+valor_total_nota double precision not null,
+id_cliente serial not null,
+id_loja serial not null,
+FOREIGN KEY (id_cliente) REFERENCES cliente(id),
+FOREIGN KEY (id_loja) REFERENCES loja(id)
+);
+
+create table unidade_medida (
+id_unidade_medida serial primary key not null,
+cod_unidade_medida numeric unique not null,
+unid varchar not null,
+descricao_unidade_medida varchar(20) not null
+);
+
+create table categoria (
+id serial primary key not null,
+cod numeric unique not null,
+descricao varchar(20) not null
+);
+
+create table produto (
+id_produto serial primary key not null,
+cod_produto numeric unique not null,
+descricao_produto varchar(20) not null,
+qtde_estoque_produto numeric not null,
+preco_produto double precision not null,
+id_unid_medida serial not null,
+id_categoria serial not null,
+FOREIGN KEY (id_unid_medida) REFERENCES unidade_medida(id_unid_medida),
+FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+);
+
+create table item_nota (
+id_item serial primary key not null,
+valor_unitario double precision not null,
+qtde numeric not null,
+total_por_produto double precision not null,
+id_nota_fiscal serial not null,
+id_produto serial not null,
+FOREIGN KEY (id_nota_fiscal) REFERENCES nota_fiscal(id_nota_fiscal),
+FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+)
+
+create table tipo_logrador (
+id_logrador serial primary key not null,
+descricao_logrador varchar(20) not null
+)
